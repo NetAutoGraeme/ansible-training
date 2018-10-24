@@ -1,0 +1,13 @@
+hostname {{ inventory_hostname }}
+enable secret {{ inventory_hostname }}
+ip domain name test.com
+username {{ inventory_hostname }} secret {{ inventory_hostname }}
+interface FastEthernet0/0
+ ip address dhcp
+no shut
+
+line vty 0 5
+ login local
+ transport input all
+
+

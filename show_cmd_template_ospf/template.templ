@@ -1,0 +1,9 @@
+Value NEIGH_ID (\w+\.\w+\.\w+\.\w+)
+Value NEIGH_PRI (\d+)
+Value NEIGH_STATE (\S+)
+Value NEIGH_DEADT (\d+\:\d+\:\d+)
+Value NEIGH_ADD (\w+\.\w+\.\w+\.\w+)
+Value NEIGH_INTERF (\S+)
+
+Start
+  ^${NEIGH_ID}\s+${NEIGH_PRI}\s+${NEIGH_STATE}\s+${NEIGH_DEADT}\s+${NEIGH_ADD}\s+${NEIGH_INTERF} -> Record

@@ -1,0 +1,17 @@
+---
+- name: Demo of Network Stuff
+  hosts: all
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Grab a show command
+      eos_command:
+        commands: 
+          - show version
+          - show ip int brief
+      register: config
+
+    - debug:
+        msg: "{{config}}"
+

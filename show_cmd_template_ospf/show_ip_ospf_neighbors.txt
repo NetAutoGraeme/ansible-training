@@ -1,0 +1,11 @@
+Router# show ip ospf neighbor
+
+   ID          Pri   State        Dead Time     Address         Interface
+10.199.199.137  1    FULL/DR       0:00:31    192.168.80.37      Ethernet0
+172.16.48.1     1    FULL/BDR      0:00:33    172.16.48.1        Fddi0
+172.16.48.200   1    FULL/DROTHER  0:00:33    172.16.48.200      Fddi0
+10.199.199.137  5    2-WAY/DROTHER 0:00:33    172.16.48.189      Fddi0
+10.199.199.137  5    FULL/DR       0:00:33    172.16.48.189      Fddi0
+10.199.199.137  5    FULL/ -       0:00:33    172.16.48.189      Fddi0
+10.199.199.137  5    INIT/-        0:00:33    172.16.48.189      Fddi0
+10.199.199.137  5    -/-           0:00:33    172.16.48.189      Fddi0

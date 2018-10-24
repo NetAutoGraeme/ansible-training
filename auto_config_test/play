@@ -1,0 +1,25 @@
+---
+#ANSIBLE PLAYBOOK AUTO CONFIG TEST
+# '-' denotes a list. There is a single play in this playbook. 1st method is to print a statement
+# STEP 1 - CREATE PLAY
+
+-   name: Create Access Switch Config
+    hosts: all
+    connection: local
+   
+# pre-tasks are completed before roles are assigned. Here we clear directories
+# STEP 3 CREATE OUTPUT DIRECTORY
+
+    tasks:
+    - name: Build Configs for devices...
+
+# inventory_hostname is an auto ansible variable given to the host in the hosts files
+# File: module used to set attributes. Here the state is set to absent or delete
+    
+      file: path={{configdir}} state=absent
+      file: path={{configdir}} state=directory
+        
+# register: module is built-in ansible and used to store results of indivdual tasks
+# in a variable named baseconfdir
+      
+      assemble: src{{ templatedir }}/RTR dest={{ configdir }}/{{inventory_hostname}}.conf

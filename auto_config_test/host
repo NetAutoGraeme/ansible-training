@@ -1,0 +1,11 @@
+[devices]
+R[01:20]
+
+[devices:vars]
+logdir=/home/graeme/ansible_testing/auto_config_test/log
+configdir=/home/graeme/ansible_testing/auto_config_test/config
+templatedir=/home/graeme/ansible_testing/auto_config_test/template
+ntp_server=192.168.1.1
+snmp_server=192.168.2.2
+
+

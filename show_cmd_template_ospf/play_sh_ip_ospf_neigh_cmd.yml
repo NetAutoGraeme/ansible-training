@@ -1,0 +1,37 @@
+---
+- name: Create Access Switch Config
+  hosts: devices
+#  connection: local
+  gather_facts: no
+
+  tasks:
+#  - name: DEFINE PROVIDER
+#    set_fact:
+#      provider:
+#        host: "{{ inventory_hostname }}"
+#        username: cisco
+#        password: cisco
+#        auth_pass: cisco
+
+  - name: run show ip ospf neighbour on remote devices
+    ios_command:
+     host:"{{ inventory_hostname }}"
+     username:"{{ username }}"
+     password:"{{ password }}"
+     commands:show ip ospf neighbor
+     transport:cli
+#      provider: "{{ provider }}"
+    register: result
+
+#    - name: ntctest
+#      ntc_show_command:
+#       connection: ssh
+#       template_dir: /home/graeme/ansible_testing/show_cmd_template_ospf/template.templ
+#       platform: cisco_ios
+#       command: 'show ip ospf neighbor'
+#       host: "{{ inventory_hostname }}"
+#       username: "{{ username }}"
+#       password: "{{ password }}"
+#      register: result
+
+  - debug: var=result
