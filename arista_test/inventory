@@ -1,2 +1,8 @@
-TESTBOX ansible_host=127.0.0.1 ansible_port=2222 ansible_user=vagrant ansible_ssh_pass=vagrant ansible_pasword=vagrant
+[SPINE]
+SPINE01 ansible_host=127.0.0.1 ansible_port=2222 ansible_user=vagrant ansible_ssh_pass=vagrant ansible_pasword=vagrant
+SPINE02 ansible_host=127.0.0.1 ansible_port=2200 ansible_user=vagrant ansible_ssh_pass=vagrant ansible_pasword=vagrant
+
+[LEAF]
+LEAF01 ansible_host=127.0.0.1 ansible_port=2201 ansible_user=vagrant ansible_ssh_pass=vagrant ansible_pasword=vagrant
+LEAF02 ansible_host=127.0.0.1 ansible_port=2202 ansible_user=vagrant ansible_ssh_pass=vagrant ansible_pasword=vagrant
 
