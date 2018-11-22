@@ -1,0 +1,7 @@
+---
+- name: Build config file
+  template:
+   src: leaf_spine.j2
+   dest: ./configs/{{ inventory_hostname }}.conf
+
+

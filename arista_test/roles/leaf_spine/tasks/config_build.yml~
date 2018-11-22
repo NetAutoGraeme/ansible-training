@@ -1,0 +1,13 @@
+---
+- name: BUILD CONFIG FILES
+  hosts: localhost
+  gather_facts: false
+  vars_files:/vars/main.yml
+
+  tasks:
+   - name: Build config file
+     template:
+      src=/home/graeme/ansible_testing/arista_test/templates/leaf_spine.j2
+      dest=/home/graeme/ansible_testing/arista_test/config/test.conf 
+
+

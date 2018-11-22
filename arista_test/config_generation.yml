@@ -1,0 +1,10 @@
+---
+- name: BUILD CONFIG FILES
+  hosts: LONDON
+  roles:
+  - leaf_spine
+# tasks:
+#   - name: Build config file
+#     template:
+#       src: /home/graeme/ansible_testing/arista_test/templates/leaf_spine.j2
+#        dest: /home/graeme/ansible_testing/arista_test/config/test.conf
